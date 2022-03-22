@@ -2,10 +2,10 @@
 
 # Role :
 
-Scrum master : Etavard Cédric
-Product Owner : David Arthur
+Scrum master : Etavard Cédric <br>
+Product Owner : David Arthur <br>
 
-Dev : Mahé Mélina
-      Fontaneau Thomas 
-      Dubuis ingrid
+Dev : Mahé Mélina <br>
+      Fontaneau Thomas <br> 
+      Dubuis ingrid <br>
       
