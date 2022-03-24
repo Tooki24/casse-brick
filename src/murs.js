@@ -4,8 +4,6 @@ let mur3=[0,0,1000,50]
 let murs=[mur1,mur2,mur3]
 
 
-
-
 function buildMurs(ctx){
     for (let i=0;i<murs.length;i++)
     {

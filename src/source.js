@@ -67,4 +67,5 @@ $(document).ready(function()
     buildMurs(context);
     // On imagine qu’il y a un bouton pour effacer le contenu du canvas
     $('#clear').on('click', clearCanvas);
+    drawLives(document);
 });
