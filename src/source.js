@@ -1,10 +1,9 @@
-import buildMurs from 'murs.js';
+
 let canvas;
 let context;
 let started;
 let x;
 let y;
-
 
 function mouseMove(event)
 {
@@ -50,8 +49,11 @@ function clearCanvas(event)
 }
 
 
+
 $(document).ready(function()
 {
+    
+    console.log('test');
     /* Canvas */
     canvas = document.getElementById('drawArea');
     context = canvas.getContext('2d');
@@ -63,7 +65,6 @@ $(document).ready(function()
     canvas.addEventListener('mousedown', mouseClick);
     canvas.addEventListener('mouseup', mouseUp);
     buildMurs(context);
-
     // On imagine qu’il y a un bouton pour effacer le contenu du canvas
     $('#clear').on('click', clearCanvas);
 });
