@@ -1,10 +1,11 @@
-
 let canvas;
 let context;
 let started;
 let x;
 let y;
 
+let rightPressed = false;
+let leftPressed = false;
 
 function mouseMove(event)
 {
@@ -49,6 +50,15 @@ function clearCanvas(event)
     context.clearRect(0, 0, canvas.width, canvas.height);
 }
 
+function keyDownHandler(event)
+{
+    if(event.key == "Right" || event.key == "ArrowRight")
+    {
+        rightPressed=true;
+        console.log(rightPressed);
+        drawRaquette(context,rightPressed,leftPressed);
+    }
+}
 
 $(document).ready(function()
 {
@@ -63,6 +73,10 @@ $(document).ready(function()
     canvas.addEventListener('mousedown', mouseClick);
     canvas.addEventListener('mouseup', mouseUp);
 
-    // On imagine qu’il y a un bouton pour effacer le contenu du canvas
-    $('#clear').on('click', clearCanvas);
+    document.addEventListener("keydown", keyDownHandler, false);
+    //document.addEventListener("keyup", keyUpHandler, false);
+
+    drawRaquette(context,rightPressed,leftPressed);
+
 });
+
