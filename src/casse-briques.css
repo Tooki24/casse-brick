@@ -1,9 +1,11 @@
-.body{
+body{
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
 
-.canvas{
+canvas{
     background-color: darkgrey;
     border: black solid;
 }
+
