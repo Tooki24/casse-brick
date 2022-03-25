@@ -1,8 +1,5 @@
 /*Raquette*/
 
-//https://developer.mozilla.org/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls
-
-
 class Raquette
 {
     constructor(positionX,positionY)
@@ -11,22 +8,15 @@ class Raquette
         this.positionY = positionY;
         this.large = 200;
         this.hauteur = 25;
-        this.vitesse = 5;
+        this.vitesse = 4;
     }
 
     drawRaquette(ctx)
     {
-        console.log("Ajout de la raquette au jeu");
+        ctx.beginPath();
         ctx.rect(this.positionX,this.positionY, this.large , this.hauteur);
         ctx.fillStyle = "orange";
-    
         ctx.fill();
-    }
-
-    deleteRaquette(ctx)
-    {
-        console.log("La raquette est supprimer");
-        ctx.clearRect(this.positionX,this.positionY,this.large,this.hauteur);
     }
 
     getpositionX()
@@ -60,3 +50,5 @@ class Raquette
     }
     
 }
+
+/* Fin raquette*/

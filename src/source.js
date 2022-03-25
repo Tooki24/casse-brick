@@ -7,14 +7,6 @@ let y;
 let rightPressed = false;
 let leftPressed = false;
 
-
-function clearCanvas(event)
-{
-    context.clearRect(0, 0, canvas.width, canvas.height);
-}
-
-
-
 $(document).ready(function()
 {
     /* Canvas */
@@ -24,25 +16,31 @@ $(document).ready(function()
     context.strokeStyle = "#871de0";
 
     //Raquette
-
-     let raquette = new Raquette(200,200);
-    raquette.drawRaquette(context);
+     let raquette = new Raquette(canvas.height/2,700);
 
     document.addEventListener("keydown", keyDownHandler);
-    //document.addEventListener("keyup", keyUpHandler, false);
-
-    console.log(raquette.getpositionX());
-   
 
     function keyDownHandler(event)
     {
         if(event.key == "Right" || event.key == "ArrowRight")
         {
-            raquette.deleteRaquette(context);
-            raquette.setpositionX(raquette.getpositionX()+raquette.getvitesse())
-            raquette.drawRaquette(context);
+            raquette.setpositionX(raquette.getpositionX()+raquette.getvitesse());
+        }
+        else if(event.key == "Left" || event.key == "ArrowLeft") 
+        {
+            raquette.setpositionX(raquette.getpositionX()-raquette.getvitesse());
         }
 
     }
+    //Fin raquette
+
+    function draw()
+    {
+        context.clearRect(0,0,canvas.width,canvas.height);
+        raquette.drawRaquette(context);
+    }
+    setInterval(draw,10);
+
+
 });
 
