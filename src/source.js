@@ -4,6 +4,9 @@ let context;
 let started;
 let x;
 let y;
+let radiusBalle = 7
+
+
 
 
 function mouseMove(event)
@@ -49,6 +52,20 @@ function clearCanvas(event)
     context.clearRect(0, 0, canvas.width, canvas.height);
 }
 
+function collide(cvs , balle)
+{
+    //Si la balle touche le plafond
+    if(balle.postionY-balle.radiusBalle + balle.vitesseY < 0) {
+        console.log("Collision avec le plafond")
+        balle.vitesseY = -balle.vitesseY;
+    }
+
+    //Si la balle touche un des murs
+    if(balle.postionX+balle.radiusBalle + balle.vitesseX > cvs.width || balle.postionX-radiusBalle + balle.vitesseX < 0) {
+        balle.vitesseX = -balle.vitesseX;
+        console.log("Collision avec un des murs")
+    }
+}
 
 $(document).ready(function()
 {
@@ -65,4 +82,14 @@ $(document).ready(function()
 
     // On imagine qu’il y a un bouton pour effacer le contenu du canvas
     $('#clear').on('click', clearCanvas);
+
+    let balle = new Balle(canvas.width/2, canvas.height-70, radiusBalle);
+    function draw() {
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        balle.drawBalle(context);
+        collide(canvas, balle);
+        balle.move();
+      }
+      setInterval(draw, 10);
 });
+
