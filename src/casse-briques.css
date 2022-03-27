@@ -1,9 +1,10 @@
-.body{
+body{
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
-.canvas{
+#drawArea{
     background-color: darkgrey;
     border: black solid;
 }

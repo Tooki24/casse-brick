@@ -65,4 +65,5 @@ $(document).ready(function()
 
     // On imagine qu’il y a un bouton pour effacer le contenu du canvas
     $('#clear').on('click', clearCanvas);
+    drawBrick(context,0,0);
 });
