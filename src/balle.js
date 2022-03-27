@@ -1,9 +1,9 @@
 class Balle
 {
-    constructor(postionX, postionY, radiusBalle)
+    constructor(positionX, positionY, radiusBalle)
     {
-        this.postionX = postionX;
-        this.postionY = postionY;
+        this.positionX = positionX;
+        this.positionY = positionY;
         this.vitesseX = 2;
         this.vitesseY = -2;
         this.angle = 45;
@@ -12,10 +12,9 @@ class Balle
 
     drawBalle(ctx) 
     {
-        console.log("Création de la balle");
         //Dessin de la balle
         ctx.beginPath();
-        ctx.arc(this.postionX+this.vitesseX, this.postionY+this.vitesseY, this.radiusBalle, 0, Math.PI*2);
+        ctx.arc(this.positionX+this.vitesseX, this.positionY+this.vitesseY, this.radiusBalle, 0, Math.PI*2);
         ctx.fillStyle = "#6BFCFC";
         ctx.fill();
         ctx.closePath();
@@ -23,18 +22,18 @@ class Balle
 
     move()
     {
-        this.postionX += this.vitesseX;
-        this.postionY += this.vitesseY;
+        this.positionX += this.vitesseX;
+        this.positionY += this.vitesseY;
     }
 
     getPositionX()
     {
-        return this.postionX;
+        return this.positionX;
     }
 
     getPositionY()
     {
-        return this.postionY;
+        return this.positionY;
     }
 
     getVitesse()
@@ -44,12 +43,12 @@ class Balle
 
     setPositionX(newPositionX)
     {
-        this.postionX=newPositionX;
+        this.positionX=newPositionX;
     }
 
     setPositionY(newPositionY)
     {
-        this.postionY=newPositionY;
+        this.positionY=newPositionY;
     }
 
     setVitesse(newVitesse)
