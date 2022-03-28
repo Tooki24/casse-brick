@@ -49,3 +49,5 @@ function drawLives(document){
         } 
     }
 }
+
+function 
