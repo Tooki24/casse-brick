@@ -6,8 +6,7 @@ let y;
 let radiusBalle = 6
 let hauteurRaquette = 13
 let largeurRaquette = 80
-let rightPressed = false;
-let leftPressed = false;
+let start = false;
 
 
 
@@ -48,6 +47,11 @@ function collide(cvs, balle, raquette)
 
 }
 
+function startStop()
+{
+    start=true;
+}
+
 $(document).ready(function()
 {
     /* Canvas */
@@ -71,13 +75,15 @@ $(document).ready(function()
             if(raquette.getpositionX()<canvas.width-largeurRaquette)
             {
                 raquette.setpositionX(raquette.getpositionX()+raquette.getvitesse());
+                start=true;
             }
         }
         else if(event.key == "Left" || event.key == "ArrowLeft") 
         {
             if(raquette.getpositionX()>0)
             {
-               raquette.setpositionX(raquette.getpositionX()-raquette.getvitesse()); 
+               raquette.setpositionX(raquette.getpositionX()-raquette.getvitesse());
+               start=true; 
             }
         }
    }
@@ -88,7 +94,12 @@ $(document).ready(function()
         raquette.drawRaquette(context);
         balle.drawBalle(context);
         collide(canvas, balle, raquette);
-        balle.move();
+    
+        if(start==true)
+        {
+            balle.move();
+        }
+        
       }
       setInterval(draw, 10);
 });
