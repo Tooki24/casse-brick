@@ -54,6 +54,8 @@ function startStop()
 
 $(document).ready(function()
 {
+    
+    console.log('test');
     /* Canvas */
     canvas = document.getElementById('drawArea');
     context = canvas.getContext('2d');

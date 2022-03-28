@@ -6,12 +6,38 @@
         <script type="text/javascript" src="raquette.js"></script>
         <script type="text/javascript" src="balle.js"></script>
         <link rel="stylesheet" href="casse-briques.css">
+        <script src="jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="murs.js"></script>
+        <script type="text/javascript" src="player.js"></script>
+        <script type="text/javascript" src="scoreBoard.js"></script>
     </head>
-   <body>
-       <H1>Casse-Brique</H1>
-       <div id="zoneDeJeu">
-           <canvas id="drawArea" width="700" height="600">Your browser doesn't support canvas</canvas>
+   <body>   
+       <div id="pannelLeft" class="SidePannels">
+           <table>
+               <thead>
+                   <tr>
+                       <th colspan="2">Scoreboard</th>
+                   </tr>
+               </thead>
+               <tbody id="ListScore">
+                   
+               </tbody>
+           </table>
        </div>
-       <button onclick=startStop()>Start</button>
+       <div id="main"  width="80%">
+           <h1 text-align="center">Casse-Brique</h1>
+       <canvas id="drawArea" width="1000" height="800">Your browser doesn't support canvas</canvas>
+        <div id="scorelives">
+            <div id="score">score: </div>
+            <div id="lives">lives: </div>
+        </div>
+       </div>
+       <div id="pannelRight" class="SidePannels"></div>
+       <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <input type="text" value="Nom" /><button>ok</button>
+        </div>
+    </div>
    </body>
 </html>
