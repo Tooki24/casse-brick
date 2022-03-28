@@ -3,7 +3,9 @@ let context;
 let started;
 let x;
 let y;
-let radiusBalle = 7
+let radiusBalle = 6
+let hauteurRaquette = 13
+let largeurRaquette = 80
 let rightPressed = false;
 let leftPressed = false;
 
@@ -55,8 +57,8 @@ $(document).ready(function()
     context.strokeStyle = "#871de0";
 
     //Déclaration des objets
-    let raquette = new Raquette(canvas.height/2,700);
-    let balle = new Balle(canvas.width/2, 700-radiusBalle+1, radiusBalle);
+    let raquette = new Raquette(canvas.width/2-largeurRaquette/2, 500, largeurRaquette, hauteurRaquette);
+    let balle = new Balle(canvas.width/2, 500-radiusBalle+1, radiusBalle);
 
     //Gestion de la raquette
     document.addEventListener("keydown", keyDownHandler);
@@ -66,7 +68,7 @@ $(document).ready(function()
         console.log("Position de la raquette : "+raquette.getpositionX());
         if(event.key == "Right" || event.key == "ArrowRight")
         {
-            if(raquette.getpositionX()<1000-200)
+            if(raquette.getpositionX()<canvas.width-largeurRaquette)
             {
                 raquette.setpositionX(raquette.getpositionX()+raquette.getvitesse());
             }

@@ -2,12 +2,12 @@
 
 class Raquette
 {
-    constructor(positionX,positionY)
+    constructor(positionX,positionY, largeur, hauteur)
     {
         this.positionX = positionX;
         this.positionY = positionY;
-        this.largeur = 200;
-        this.hauteur = 25;
+        this.largeur = largeur;
+        this.hauteur = hauteur;
         this.vitesse = 10;
     }
 
