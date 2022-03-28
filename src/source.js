@@ -10,6 +10,18 @@ let rightPressed = false;
 let leftPressed = false;
 
 
+function openForm() {
+    let divZoneJeu = document.getElementById('zoneDeJeu');
+    let divPartiePerdue = document.createElement('div');
+    divPartiePerdue.className = "popup";
+    divZoneJeu.appendChild(divPartiePerdue);
+    divPartiePerdue.innerHTML = 'fejagrlae';
+
+}
+function closeForm() {
+    //
+}
+
 
 function collide(cvs, balle, raquette)
 {
@@ -23,6 +35,14 @@ function collide(cvs, balle, raquette)
     if(balle.positionX+radiusBalle + balle.vitesseX > cvs.width || balle.positionX-radiusBalle + balle.vitesseX < 0) {
         console.log("Collision avec un des murs")
         balle.vitesseX = -balle.vitesseX;
+    }
+
+    //Si la balle touche le mur du bas
+    if(balle.positionY-radiusBalle + balle.vitesseY > 600) {
+        console.log("La partie est perdue")
+        balle.vitesseX = 0;
+        balle.vitesseY = 0;
+        openForm();
     }
 
     //Si la balle touche le haut de la raquette
