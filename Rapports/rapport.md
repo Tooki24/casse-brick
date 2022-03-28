@@ -29,7 +29,7 @@
 -  [Visual studio code](https://code.visualstudio.com/) pour l'IDE.
 - [Git](https://gitlab.univ-lr.fr/cetavard/fontaneau_mahe_dubuis_david_etavard_progweb_cb) pour la gestion du code et des versions du code.
 
-Pour la gestion du git nous avons procéde de la manière suivante :
+Pour la gestion du git nous avons procéde de la manière suivante :<br>
 ![image_git](image_md/git.png)<br>
 Chaque US avait une branch sur la branch dev, une fois la US finit une merge sur la dev et effectué. Aprés vérification et résolution des éventuel conflits entre les US une merge du produit final et livrer sur la main.
 
