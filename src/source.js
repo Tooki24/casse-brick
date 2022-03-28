@@ -60,10 +60,6 @@ $(document).ready(function()
     context.lineWidth = 1;
     context.strokeStyle = "#871de0";
     drawSB(document)
-    // Ajout des gestionnaires d'evenements
-    canvas.addEventListener('mousemove', mouseMove);
-    canvas.addEventListener('mousedown', mouseClick);
-    canvas.addEventListener('mouseup', mouseUp);
     inputOpen(document);
     $("#btn").click(function(){
         console.log("clic");
@@ -78,7 +74,5 @@ $(document).ready(function()
     })
     buildMurs(context);
     addScore(getNom(),100);
-    // On imagine qu’il y a un bouton pour effacer le contenu du canvas
-    $('#clear').on('click', clearCanvas);
     drawLives(document);
 });
