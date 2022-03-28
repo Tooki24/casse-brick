@@ -2,9 +2,13 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    flex-direction: column;
+    text-align: center;
 }
 
-#drawArea{
+
+canvas{
     background-color: darkgrey;
     border: black solid;
 }
+
