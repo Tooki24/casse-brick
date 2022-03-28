@@ -1,5 +1,15 @@
-let lives=2;
+let vies=2;
 let score=0;
+let nom="";
+
+
+function getNom(){
+    return nom;
+}
+
+function setNom(name){
+    nom=name;
+}
 
 function setScore(value){
     score+=value;
@@ -14,14 +24,14 @@ function notify(){
 }
 
 function loseLife(){
-    lives--;
-    if(lives==0){
+    vies--;
+    if(vies==0){
         notify()
     }
 }
 
 function getLives(){
-    return lives;
+    return vies;
 }
 
 function drawLives(document){
