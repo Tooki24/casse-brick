@@ -104,5 +104,24 @@ $(document).ready(function()
         
       }
       setInterval(draw, 10);
+
+      inputOpen(document);
+      $("#btn").click(function(){
+          console.log("clic");
+          setNom(document.getElementById("inputNom").value,document);
+          document.getElementById("myModal").style.display="none"
+      })
+      $("#close").click(function(){
+          document.getElementById("myModal").style.display="none"
+      })
+      $("#modify").click(function(){
+          document.getElementById("myModal").style.display="block"
+      })
+      buildMurs(context);
+      addScore(getNom(),100);
+      // On imagine qu’il y a un bouton pour effacer le contenu du canvas
+      $('#clear').on('click', clearCanvas);
+      drawLives(document);
+  
 });
 
