@@ -54,7 +54,7 @@ function startStop()
 
 $(document).ready(function()
 {
-    
+    drawName(document)
     console.log('test');
     /* Canvas */
     canvas = document.getElementById('drawArea');

@@ -1,6 +1,6 @@
-let mur1=[0,0,50,600]
-let mur2=[950,0,50,600]
-let mur3=[0,0,1000,50]
+let mur1=[0,0,10,500]
+let mur2=[690,0,10,500]
+let mur3=[0,0,700,10]
 let murs=[mur1,mur2,mur3]
 
 
