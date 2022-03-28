@@ -52,7 +52,7 @@ function clearCanvas(event)
 
 $(document).ready(function()
 {
-    
+    drawName(document)
     console.log('test');
     /* Canvas */
     canvas = document.getElementById('drawArea');
@@ -64,10 +64,20 @@ $(document).ready(function()
     canvas.addEventListener('mousemove', mouseMove);
     canvas.addEventListener('mousedown', mouseClick);
     canvas.addEventListener('mouseup', mouseUp);
-
-
+    inputOpen(document);
+    $("#btn").click(function(){
+        console.log("clic");
+        setNom(document.getElementById("inputNom").value,document);
+        document.getElementById("myModal").style.display="none"
+    })
+    $("#close").click(function(){
+        document.getElementById("myModal").style.display="none"
+    })
+    $("#modify").click(function(){
+        document.getElementById("myModal").style.display="block"
+    })
     buildMurs(context);
-    addScore("Ced",100);
+    addScore(getNom(),100);
     // On imagine qu’il y a un bouton pour effacer le contenu du canvas
     $('#clear').on('click', clearCanvas);
     drawLives(document);

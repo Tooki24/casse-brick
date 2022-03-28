@@ -23,18 +23,23 @@
            </table>
        </div>
        <div id="main"  width="80%">
-           <h1 text-align="center">Casse-Brique</h1>
-       <canvas id="drawArea" width="1000" height="800">Your browser doesn't support canvas</canvas>
+            <h1 text-align="center">Casse-Brique</h1>  
+       <canvas id="drawArea" width="700" height="600">Your browser doesn't support canvas</canvas>
         <div id="scorelives">
             <div id="score">score: </div>
             <div id="lives">lives: </div>
         </div>
        </div>
-       <div id="pannelRight" class="SidePannels"></div>
+       <div id="pannelRight" class="SidePannels">
+           <div id="name">
+                <h2 id="nom"></h2><button id="modify"><img src="img/pen.png" width="10px" heigth="10px"/></button>
+           </div>
+           
+       </div>
        <div id="myModal" class="modal">
         <div class="modal-content">
-            <span class="close">&times;</span>
-            <input type="text" value="Nom" /><button>ok</button>
+            <span class="close" id="close">&times;</span>
+            <input type="text" value="Nom" id="inputNom" /><button id="btn">ok</button>
         </div>
     </div>
    </body>

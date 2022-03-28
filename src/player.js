@@ -1,14 +1,19 @@
-let vies=2;
+let vies=3;
 let score=0;
-let nom="";
+let nom="exemple";
 
+
+function drawName(document){
+    document.getElementById("nom").innerHTML=nom
+}
 
 function getNom(){
     return nom;
 }
 
-function setNom(name){
+function setNom(name,document){
     nom=name;
+    drawName(document)
 }
 
 function setScore(value){
@@ -55,3 +60,4 @@ function inputOpen(document){
     modal.style.display="block";
 
 }
+
