@@ -2,9 +2,10 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-image:url("img/space_background.png");
+    background-image:url("img/unknown.png");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 150%;
+    background-position: center;
     font-family: 'Courier New', Courier, monospace;
 }
 
@@ -44,7 +45,46 @@ h1{
     color:white;
 }
 
-.modal {
+
+  h2{
+      color: white;
+  }
+
+  #name{
+    display: flex;
+	flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* --------------------MODAL---------------------*/
+  .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -78,14 +118,4 @@ h1{
     color: black;
     text-decoration: none;
     cursor: pointer;
-  }
-  h2{
-      color: white;
-  }
-
-  #name{
-    display: flex;
-	flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
   }
