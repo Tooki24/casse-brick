@@ -3,9 +3,48 @@ let context;
 let started;
 let x;
 let y;
-
+let radiusBalle = 7
 let rightPressed = false;
 let leftPressed = false;
+
+
+
+function collide(cvs, balle, raquette)
+{
+    //Si la balle touche le plafond
+    if(balle.positionY-radiusBalle + balle.vitesseY < 0) {
+        console.log("Collision avec le plafond")
+        balle.vitesseY = -balle.vitesseY;
+    }
+
+    //Si la balle touche un des murs
+    if(balle.positionX+radiusBalle + balle.vitesseX > cvs.width || balle.positionX-radiusBalle + balle.vitesseX < 0) {
+        console.log("Collision avec un des murs")
+        balle.vitesseX = -balle.vitesseX;
+    }
+
+    //Si la balle touche le haut de la raquette
+    if(balle.positionY+radiusBalle + balle.vitesseY > raquette.positionY && balle.positionX >= raquette.positionX && balle.positionX <= raquette.positionX+raquette.largeur && balle.positionY <= raquette.positionY+raquette.hauteur)
+    {
+        console.log("Collision avec le haut de la raquette")
+        balle.vitesseY = -balle.vitesseY;
+    }
+
+    //Si la balle touche le côté gauche de la raquette
+    if(balle.positionX+radiusBalle + balle.vitesseX > raquette.positionX && balle.positionY >= raquette.positionY && balle.positionY <= raquette.positionY+raquette.hauteur && balle.positionX+radiusBalle <= raquette.positionX+raquette.largeur)
+    {
+        console.log("Collision avec le cote gauche de la raquette")
+        balle.vitesseX = -balle.vitesseX;
+    }
+
+    //Si la balle touche le côté droit de la raquette
+    if(balle.positionX-radiusBalle + balle.vitesseX < raquette.positionX+raquette.largeur && balle.positionY >= raquette.positionY && balle.positionY <= raquette.positionY+raquette.hauteur && balle.positionX-radiusBalle >= raquette.positionX)
+    {
+        console.log("Collision avec le cote droit de la raquette")
+        balle.vitesseX = -balle.vitesseX;
+    }
+
+}
 
 $(document).ready(function()
 {
@@ -15,32 +54,40 @@ $(document).ready(function()
     context.lineWidth = 1;
     context.strokeStyle = "#871de0";
 
-    //Raquette
-     let raquette = new Raquette(canvas.height/2,700);
+    //Déclaration des objets
+    let raquette = new Raquette(canvas.height/2,700);
+    let balle = new Balle(canvas.width/2, 700-radiusBalle+1, radiusBalle);
 
+    //Gestion de la raquette
     document.addEventListener("keydown", keyDownHandler);
 
     function keyDownHandler(event)
     {
+        console.log("Position de la raquette : "+raquette.getpositionX());
         if(event.key == "Right" || event.key == "ArrowRight")
         {
-            raquette.setpositionX(raquette.getpositionX()+raquette.getvitesse());
+            if(raquette.getpositionX()<1000-200)
+            {
+                raquette.setpositionX(raquette.getpositionX()+raquette.getvitesse());
+            }
         }
         else if(event.key == "Left" || event.key == "ArrowLeft") 
         {
-            raquette.setpositionX(raquette.getpositionX()-raquette.getvitesse());
+            if(raquette.getpositionX()>0)
+            {
+               raquette.setpositionX(raquette.getpositionX()-raquette.getvitesse()); 
+            }
         }
-
-    }
+   }
     //Fin raquette
 
-    function draw()
-    {
-        context.clearRect(0,0,canvas.width,canvas.height);
+    function draw() {
+        context.clearRect(0, 0, canvas.width, canvas.height);
         raquette.drawRaquette(context);
-    }
-    setInterval(draw,10);
-
-
+        balle.drawBalle(context);
+        collide(canvas, balle, raquette);
+        balle.move();
+      }
+      setInterval(draw, 10);
 });
 
