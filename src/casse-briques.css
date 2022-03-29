@@ -1,12 +1,13 @@
 body{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     flex-direction: column;
     text-align: center;
 }
 
+
 canvas{
-    background-color: darkgrey;
     border: black solid;
 }
 
