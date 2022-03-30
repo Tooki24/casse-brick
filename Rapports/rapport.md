@@ -43,7 +43,7 @@ Chaque US avait une branch sur la branch dev, une fois la US finit une merge sur
 
 ### **US2 : La raquette**
 
-Cette US et divisé en 3 fonctionnalités et vise à crée une raquette que se déplace en fonction de la flèche directionnel pressé. 
+Cette US est divisé en 3 fonctionnalités et vise à crée une raquette que se déplace en fonction de la flèche directionnel pressé. 
 
 - Création de la forme de la raquette<br>
  <img src="image_md/raquette.png" width="300"/><br>
@@ -56,7 +56,7 @@ Cette US et divisé en 3 fonctionnalités et vise à crée une raquette que se d
 
 ### **US3 : La balle**
 
-Cette US et divisé en 4 fonctionnalités et vise à crée une balle que se déplace et change de direction en fonction des obstacles rencontré (mur,brique,raquette). 
+Cette US est divisé en 4 fonctionnalités et vise à crée une balle que se déplace et change de direction en fonction des obstacles rencontré (mur,brique,raquette). 
 
 - Création de la forme de la balle<br>
  <img src="image_md/balle.png" width="300"/><br>
@@ -69,6 +69,16 @@ Cette US et divisé en 4 fonctionnalités et vise à crée une balle que se dép
 
 - Mise en place des collisions avec les briques<br>
  <img src="" width="300"/><br>
+
+### **US4 : Les briques**
+Cette US est divisé en 3 fonctionnalités et vise à crée un mur de brique composé de brique "normale" et de brique "vitesse"(augmente la vitesse de la raquette) ainsi que la disparition des briques en cas de contacte avec la balle.
+
+- Création des briques normales <br>
+<img src="image_md/" width="300"/><br>
+- Création des briques vitesses <br>
+<img src="image_md/" width="300"/><br>
+- Gestion de la disparition des briques <br>
+<img src="image_md/" width="300"/><br>
 
 ## <a id="regle">**Règles :**</a>
 ---
