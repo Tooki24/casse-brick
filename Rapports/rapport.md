@@ -13,23 +13,23 @@
 ---
 
 - Scrum Master :
-    - Etavard Cédric
-        - US09
-        - US10
+    - **Etavard Cédric**
+        - US09 - [Affichage des scores](#US9)
+        - US10 - [Affichage du menu](#US10)
         - US06 - [Gestion des vies du joueu](#US6)
         - US07 - [Gestion du score](#US7)
 - Product Owner :
-    - David Arthur
+    - **David Arthur**
       - US03 - [La balle](#US3)
       - Création des maquettes du jeu
 - Scrum Team :
-    - Mahé Mélina 
+    - **Mahé Mélina**
       - US04 - [Les briques](#US4)
-      - Recherche et création des graphisme  
-    - Dubuis Ingrid
+      - Recherche et création des graphismes  
+    - **Dubuis Ingrid**
       - US05 - [La mort du joueur](#US5)
       - Création de l'oral
-    - Fontaneau Thomas
+    - **Fontaneau Thomas**
       -  US02 - [La Raquette](#US2)
       -  Rédaction du rapport
 
@@ -49,6 +49,11 @@ Chaque US avait une branch sur la branch dev, une fois la US finit une merge sur
 
 ## <a id="diagramme">**Diagrammes :**</a>
 ---
+ 
+Pour partager les taches dans le projet nous avons découpé nos diffèrent composent (raquette, balle...) en classe. Voici le digramme de classe que nous avons produit pour nous aider : 
+<br>
+
+<img src="image_md/" width="300"/><br>
 
 ## <a id="projet">**Avancement du projet :**</a>
 ---
@@ -121,12 +126,12 @@ Cette US permet d'ajouter au score du joueur des points en fonction des briques 
 - Le joueur détruit une brique vitesse <br>
 <img src="image_md/" width="300"/><br>
 
-### **US9 : Affichage des scores**
+### <a id="US9">**US9 : Affichage des score**</a>
 A l'aide du serveur fournie l'US consiste à enregistrer le score du joueur actuellement en train de jouer. 
 
 <img src="image_md/" width="300"/><br>
 
-### **US10 : Affichage du menu**
+### <a id="US10">**US10 : Affichage du menu**</a>
 On retrouve 4 fonctionnalités dans l'US, avec un bouton start pour lancer le jeu, une zone ou le joueur va inscrire son nom, les meilleur score des autres joueurs et enfin les règle du jeu. 
 
 - Score des meilleur joueurs <br>
@@ -136,12 +141,22 @@ On retrouve 4 fonctionnalités dans l'US, avec un bouton start pour lancer le je
 
 ### **Les fonctionnalités manquantes**
 
-### **US8 : Gestion du passage de niveau**
+### <a id="US8">**US8 : Gestion du passage de niveau**</a>
 Quand le joueur détruit la dernière brique du niveau actuelle le jeu passe au niveau suivant et un nouveau mur est créé. 
 
 ## <a id="regle">**Règles :**</a>
 ---
 
+### Commande du jeu 
+
+<img src="image_md/left_arrow.png" width="15"/> --> Déplace la raquette vers la gauche.<br>
+
+<img src="image_md/right_arrow.png" width="15"/> --> Déplace la raquette vers la droite.<br>
+
+
+### Déroulement d'une partie 
+
+Une partie ce lance quand le joueur entre un nom et appuyé sur une des deux touches directionnel (détaillé au-dessus). Le but du jeu est de détruire le plus de brique à l'aide d'une balle qui rebondie sur la raquette que nous contrôlons. Le joueur possède trois vies et en perd une à chaque fois que la balle touche le mur inferieur. La partie s'achevé lorsque que le joueur perd ces trois vies. 
 
 
 ## <a id="probleme">**Les problèmes rencontré :**</a>
