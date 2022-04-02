@@ -12,7 +12,7 @@ let nbColonnes = 9;
 let nbLignes = 9;
 let interBrique = 3;
 let interBriqueMur = 4;
-
+let start = 0;
 
 function collide(cvs, balle, raquette) {
     //Si la balle touche le plafond
@@ -106,6 +106,7 @@ $(document).ready(function()
     document.addEventListener("keydown", keyDownHandler);
 
     function keyDownHandler(event) {
+        start=1;
         console.log("Position de la raquette : " + raquette.getpositionX());
         if (event.key == "Right" || event.key == "ArrowRight") {
             if (raquette.getpositionX() < canvas.width - largeurRaquette) {
@@ -126,7 +127,11 @@ $(document).ready(function()
         balle.drawBalle(context);
         drawBricks(bricksArray, context);
         collide(canvas, balle, raquette);
-        balle.move();
+        if(start==1)
+        {
+            balle.move();
+        }
+        
     }
     setInterval(draw, 10);
     drawSB(document)

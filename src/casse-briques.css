@@ -15,7 +15,8 @@ canvas{
 }
 
 h1{
-    background-color: aqua;
+    background-color: maroon;
+    text-align: center;
 }
 .SidePannels{
     width:10%;
@@ -47,6 +48,10 @@ h1{
 
 
   h2{
+      color: white;
+  }
+
+  p{
       color: white;
   }
 
