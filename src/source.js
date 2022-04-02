@@ -9,11 +9,11 @@ let largeurRaquette = 80
 let rightPressed = false;
 let leftPressed = false;
 
-function restartGame() {
-    $('')
-}
-
+// Gestion de la popup quand le joueur perd la balle
 function openPopup() {
+
+    // Creation des elements de la popup
+
     let divZoneJeu = document.getElementById('zoneDeJeu');
 
     let divPartiePerdue = document.createElement('div');
@@ -28,6 +28,7 @@ function openPopup() {
     divPartiePerdue.appendChild(divImage);
     divPartiePerdue.appendChild(divrestart);
 
+    // Gestion du clic sur le bouton restart
     divrestart.addEventListener('click', function(){divPartiePerdue.style.display="none"; location.reload();});
 }
 
