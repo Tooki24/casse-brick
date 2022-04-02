@@ -13,11 +13,16 @@ let leftPressed = false;
 function openForm() {
     let divZoneJeu = document.getElementById('zoneDeJeu');
     let divPartiePerdue = document.createElement('div');
+    let divImage = document.createElement('div');
+    let divrestart = document.createElement('div');
     divPartiePerdue.className = "popup";
+    divImage.className = "gameOver";
+    divrestart.className = "restart";
     divZoneJeu.appendChild(divPartiePerdue);
-    divPartiePerdue.innerHTML = 'fejagrlae';
-
+    divPartiePerdue.appendChild(divImage);
+    divPartiePerdue.appendChild(divrestart);
 }
+
 function closeForm() {
     //
 }

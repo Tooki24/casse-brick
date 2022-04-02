@@ -5,17 +5,47 @@ body{
     text-align: center;
 }
 
+#zoneDeJeu {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
 canvas{
     background-color: darkgrey;
     border: black solid;
 }
 
 .popup {
-    background-color: #ff0000;
-    position :fixed;
-    left:30%;
+    background-color: #241c23;
+    border: black solid 3px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position :absolute;
+    top: 200px;
     width: 400px;
     height: 400px;
-    z-index: 10;
+    z-index: 3;
+}
+
+.gameOver {
+    background-image: url("../img/game_over.png");
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 330px;
+    height: 250px;
+    z-index: 4;
+}
+
+.restart {
+    background-image: url("../img/restart.png");
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 200px;
+    height: 70px;
+    z-index: 4;
 }
 
