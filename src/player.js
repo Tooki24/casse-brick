@@ -1,5 +1,5 @@
 let vies=3;
-let score=0;
+let score=30;
 let nom="exemple";
 
 

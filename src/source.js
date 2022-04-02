@@ -129,5 +129,21 @@ $(document).ready(function()
         balle.move();
     }
     setInterval(draw, 10);
+    drawSB(document)
+    inputOpen(document);
+    $("#btn").click(function(){
+        console.log("clic");
+        setNom(document.getElementById("inputNom").value,document);
+        document.getElementById("myModal").style.display="none"
+    })
+    $("#close").click(function(){
+        document.getElementById("myModal").style.display="none"
+    })
+    $("#modify").click(function(){
+        document.getElementById("myModal").style.display="block"
+    })
+    buildMurs(context);
+    addScore(getNom(),100);
+    drawLives(document);
 });
 
