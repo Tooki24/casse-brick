@@ -9,24 +9,27 @@ let largeurRaquette = 80
 let rightPressed = false;
 let leftPressed = false;
 
+function restartGame() {
+    $('')
+}
 
-function openForm() {
+function openPopup() {
     let divZoneJeu = document.getElementById('zoneDeJeu');
+
     let divPartiePerdue = document.createElement('div');
     let divImage = document.createElement('div');
     let divrestart = document.createElement('div');
+
     divPartiePerdue.className = "popup";
     divImage.className = "gameOver";
     divrestart.className = "restart";
+
     divZoneJeu.appendChild(divPartiePerdue);
     divPartiePerdue.appendChild(divImage);
     divPartiePerdue.appendChild(divrestart);
-}
 
-function closeForm() {
-    //
+    divrestart.addEventListener('click', function(){divPartiePerdue.style.display="none"; location.reload();});
 }
-
 
 function collide(cvs, balle, raquette)
 {
@@ -47,7 +50,7 @@ function collide(cvs, balle, raquette)
         console.log("La partie est perdue")
         balle.vitesseX = 0;
         balle.vitesseY = 0;
-        openForm();
+        openPopup();
     }
 
     //Si la balle touche le haut de la raquette

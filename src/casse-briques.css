@@ -23,7 +23,7 @@ canvas{
     flex-wrap: wrap;
     justify-content: center;
     position :absolute;
-    top: 200px;
+    top: 205px;
     width: 400px;
     height: 400px;
     z-index: 3;
