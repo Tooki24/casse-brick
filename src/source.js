@@ -86,9 +86,11 @@ function drawBricks(bricksArray, ctx) {
 
 
 
-
-$(document).ready(function () {
-    //Canvas
+$(document).ready(function()
+{
+    drawName(document)
+    console.log('test');
+    /* Canvas */
     canvas = document.getElementById('drawArea');
     context = canvas.getContext('2d');
     context.lineWidth = 1;
