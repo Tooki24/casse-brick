@@ -15,7 +15,7 @@ class Balle
         //Dessin de la balle
         ctx.beginPath();
         ctx.arc(this.positionX+this.vitesseX, this.positionY+this.vitesseY, this.radiusBalle, 0, Math.PI*2);
-        ctx.fillStyle = "#6BFCFC";
+        ctx.fillStyle = "#FF00FF";
         ctx.fill();
         ctx.closePath();
     }

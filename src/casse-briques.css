@@ -10,8 +10,10 @@ body{
 }
 
 canvas{
-    background-color: darkgrey;
-    border: black solid;
+    border-top: 7px white solid;
+    border-left: 7px white solid;
+    border-right: 7px white solid;
+    border-bottom: 1px white solid;
 }
 
 h1{

@@ -15,7 +15,7 @@ class Raquette
     {
         ctx.beginPath();
         ctx.rect(this.positionX,this.positionY, this.largeur , this.hauteur);
-        ctx.fillStyle = "orange";
+        ctx.fillStyle = "#76FE00";
         ctx.fill();
     }
 

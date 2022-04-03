@@ -17,12 +17,12 @@ class Brick{
         if(this.type == 0)
         {
             ctx.rect(this.positionX, this.positionY, this.long, this.larg);
-            ctx.fillStyle = "rgba(255, 255, 0, .5)";
+            ctx.fillStyle = "#01FFFF";
         }
         else if(this.type == 1)
         {
             ctx.rect(this.positionX, this.positionY, this.long, this.larg);
-            ctx.fillStyle = "#f00020";
+            ctx.fillStyle = "#BF00FE";
         }
 
 
