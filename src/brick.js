@@ -17,7 +17,7 @@ class Brick{
         if(this.type == 0)
         {
             ctx.rect(this.positionX, this.positionY, this.long, this.larg);
-            ctx.fillStyle = "#0095DD";
+            ctx.fillStyle = "rgba(255, 255, 0, .5)";
         }
         else if(this.type == 1)
         {
