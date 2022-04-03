@@ -9,6 +9,12 @@ body{
     font-family: 'Courier New', Courier, monospace;
 }
 
+#zoneDeJeu {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
 canvas{
     border-top: 7px white solid;
     border-left: 7px white solid;
@@ -16,6 +22,38 @@ canvas{
     border-bottom: 1px white solid;
 }
 
+.popup {
+    background-color: #241c23;
+    border: black solid 3px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position :absolute;
+    top: 205px;
+    width: 400px;
+    height: 400px;
+    z-index: 3;
+}
+
+.gameOver {
+    background-image: url("../img/game_over.png");
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 330px;
+    height: 250px;
+    z-index: 4;
+}
+
+.restart {
+    background-image: url("../img/restart.png");
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 200px;
+    height: 70px;
+    z-index: 4;
+}
 
 .SidePannels{
     width:10%;

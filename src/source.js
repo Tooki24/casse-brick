@@ -15,6 +15,30 @@ let interBriqueMur = 4;
 let start = 0;
 let start2 = 0;
 
+// Gestion de la popup quand le joueur perd la balle
+function openPopup() {
+
+    // Creation des elements de la popup
+
+    let divZoneJeu = document.getElementById('zoneDeJeu');
+
+    let divPartiePerdue = document.createElement('div');
+    let divImage = document.createElement('div');
+    let divrestart = document.createElement('div');
+
+    divPartiePerdue.className = "popup";
+    divImage.className = "gameOver";
+    divrestart.className = "restart";
+
+    divZoneJeu.appendChild(divPartiePerdue);
+    divPartiePerdue.appendChild(divImage);
+    divPartiePerdue.appendChild(divrestart);
+
+    // Gestion du clic sur le bouton restart
+    divrestart.addEventListener('click', function(){divPartiePerdue.style.display="none"; location.reload();});
+}
+
+
 function collide(cvs, balle, raquette, bricksArray) {
     //Si la balle touche le plafond
     if (balle.positionY - radiusBalle + balle.vitesseY < 0) {
@@ -26,6 +50,15 @@ function collide(cvs, balle, raquette, bricksArray) {
     if (balle.positionX + radiusBalle + balle.vitesseX > cvs.width || balle.positionX - radiusBalle + balle.vitesseX < 0) {
         console.log("Collision avec un des murs")
         balle.vitesseX = -balle.vitesseX;
+    }
+
+    //Si la balle touche le mur du bas
+    if(balle.positionY-radiusBalle + balle.vitesseY > 600) {
+        console.log("La partie est perdue")
+        balle.vitesseX = 0;
+        balle.vitesseY = 0;
+        loseLife();
+        openPopup();
     }
 
     // --------------------------------------------------
@@ -124,7 +157,6 @@ function drawBricks(bricksArray, ctx) {
 $(document).ready(function()
 {
     drawName(document)
-    console.log('test');
     /* Canvas */
     canvas = document.getElementById('drawArea');
     context = canvas.getContext('2d');
