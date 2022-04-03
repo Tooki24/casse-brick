@@ -34,6 +34,9 @@
         - US10 - [Affichage du menu](#US10)
         - US06 - [Gestion des vies du joueur](#US6)
         - US07 - [Gestion du score](#US7)
+  
+ <div style="page-break-after: always;"></div>
+
 
 ## <a id="outil">**Outils et organisation**</a>
 ---
@@ -98,11 +101,14 @@ L'US est divisée en 4 fonctionnalités et vise à créer une balle qui se dépl
 On retrouve 3 fonctionnalités dans cette US qui vise à créer un mur de briques composé de briques "normales" et de briques "vitesse" (augmente la vitesse de la balle), ainsi que la disparition des briques en cas de contact avec la balle. 
 
 - Création des briques normales <br>
-<img src="image_md/" width="300"/><br>
+<img src="image_md/brique_normal.png" width="300"/><br>
 - Création des briques vitesses <br>
-<img src="image_md/" width="300"/><br>
+<img src="image_md/brique_vitesse.png" width="300"/><br>
 - Gestion de la disparition des briques <br>
-<img src="image_md/" width="300"/><br>
+<img src="image_md/brique.png" width="300"/><br>
+
+<div style="page-break-after: always;"></div>
+
 
 ### <a id="US5">**US5 : La mort du joueur**</a>
 Cette US a pour rôle de détecter quand le joueur va perdre une vie c'est à dire quand la balle touche le bord inferieur du terrain. 
@@ -118,6 +124,9 @@ L'US gère le nombre de vies restantes du joueur qui en a 3 au départ et en per
 - Le joueur perd une vie <br>
 <img src="image_md/2vies.PNG" width="300"/><br>
 
+<div style="page-break-after: always;"></div>
+
+
 ### <a id="US7">**US7 : Gestion du score**</a>
 
 Cette US permet d'ajouter au score du joueur des points en fonction des briques qu'il détruit. 
@@ -132,6 +141,9 @@ Cette US permet d'ajouter au score du joueur des points en fonction des briques 
 A l'aide du serveur fourni, l'US consiste à enregistrer le score du joueur actuellement en train de jouer. 
 
 <img src="image_md/score.PNG" width="300"/><br>
+
+<div style="page-break-after: always;"></div>
+
 
 ### <a id="US10">**US10 : Affichage du menu**</a>
 On retrouve 4 fonctionnalités dans l'US, avec un bouton start pour lancer le jeu, une zone où le joueur va inscrire son nom, les meilleur scores des autres joueurs et enfin les règles du jeu. 
