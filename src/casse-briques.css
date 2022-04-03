@@ -2,7 +2,7 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-image:url("img/unknown.png");
+    background-image:url("img/background.png");
     background-repeat: no-repeat;
     background-size: 150%;
     background-position: center;
@@ -16,10 +16,7 @@ canvas{
     border-bottom: 1px white solid;
 }
 
-h1{
-    background-color: maroon;
-    text-align: center;
-}
+
 .SidePannels{
     width:10%;
     background-color: rgba(0, 0, 0, 0.644);
@@ -62,6 +59,11 @@ h1{
 	flex-direction: row;
     align-items: center;
     justify-content: space-between;
+  }
+
+  #title{
+      display: flex;
+      justify-content: center;
   }
   
   /* --------------------MODAL---------------------*/
