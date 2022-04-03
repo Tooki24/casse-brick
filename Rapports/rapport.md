@@ -100,7 +100,7 @@ On retrouve 3 fonctionnalités dans cette API qui vise à crée un mur de brique
 - Création des briques vitesses <br>
 <img src="image_md/vitesseBrick.png" width="300"/><br>
 - Gestion de la disparition des briques <br>
-<img src="image_md/gestionbrick.png" width="300"/><br>
+<img src="image_md/gestionBrick.png" width="300"/><br>
 
 ### <a id="US5">**US5 : La mort du joueur**</a>
 Cette US a pour rôle détecter quand le joueur va perdre une vie c'est à dire quand la balle touche le bord inferieur du terrain. 
