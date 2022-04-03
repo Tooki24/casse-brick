@@ -2,11 +2,11 @@
 
 # Role :
 
-Scrum master : Etavard Cédric <br>
+Scrum master :  Fontaneau Thomas <br>
 Product Owner : David Arthur <br>
 
 Dev : Mahé Mélina <br>
-      Fontaneau Thomas <br> 
+      Etavard Cédric <br> 
       Dubuis ingrid <br>
       
 https://trello.com/b/uI0YcPtl/casse-brique

@@ -13,6 +13,7 @@ let nbLignes = 9;
 let interBrique = 3;
 let interBriqueMur = 4;
 let start = 0;
+let start2 = 0;
 
 function collide(cvs, balle, raquette, bricksArray) {
     //Si la balle touche le plafond
@@ -86,8 +87,6 @@ function collide(cvs, balle, raquette, bricksArray) {
     }
 }
 
-
-
 function generateBricks() {
     let bricksArray = [];
     let nbPoints = 0;
@@ -111,10 +110,6 @@ function generateBricks() {
             let yBrick = l * (largeurBrique+interBrique) + interBriqueMur;
             let aBrick = new Brick(longueurBrique, largeurBrique, brickType, xBrick, yBrick, nbPoints);
             bricksArray.push(aBrick);
-
-            // if (91 <= random) {
-            //     removeBrick(brick);
-            // }
         }
     }
     return bricksArray;
@@ -125,8 +120,6 @@ function drawBricks(bricksArray, ctx) {
             aBrick.drawBrick(ctx);
     });
 }
-
-
 
 $(document).ready(function()
 {
@@ -170,7 +163,7 @@ $(document).ready(function()
         balle.drawBalle(context); 
         drawBricks(bricksArray, context);
         collide(canvas, balle, raquette, bricksArray);
-        if(start==1)
+        if(start==1 && start2==1)
         {
             balle.move();
         }
@@ -183,12 +176,15 @@ $(document).ready(function()
         console.log("clic");
         setNom(document.getElementById("inputNom").value,document);
         document.getElementById("myModal").style.display="none"
+        start2=1;
     })
     $("#close").click(function(){
         document.getElementById("myModal").style.display="none"
     })
     $("#modify").click(function(){
         document.getElementById("myModal").style.display="block"
+        start2=0;
+        start=0;
     })
     buildMurs(context);
     addScore(getNom(),100);
