@@ -35,7 +35,7 @@ function openPopup() {
     divPartiePerdue.appendChild(divrestart);
 
     // Gestion du clic sur le bouton restart
-    divrestart.addEventListener('click', function(){divPartiePerdue.style.display="none"; });
+    divrestart.addEventListener('click', function(){divPartiePerdue.style.display="none";});
 }
 
 
