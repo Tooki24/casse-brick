@@ -9,10 +9,11 @@ body{
     font-family: 'Courier New', Courier, monospace;
 }
 
-#zoneDeJeu {
+#main {
+    width: 800px;
+    position:relative;
     display: flex;
-    justify-content: center;
-    justify-items: center;
+    flex-direction: column;
 }
 
 canvas{
@@ -28,31 +29,32 @@ canvas{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    position :absolute;
-    top: 205px;
+    position:absolute;
+    top: 100px;
+    left: 200px;
     width: 400px;
     height: 400px;
-    z-index: 3;
+    z-index: 10;
 }
 
 .gameOver {
-    background-image: url("../img/game_over.png");
+    background-image: url("img/game_over.png");
     background-size:contain;
     background-repeat: no-repeat;
     background-position: center;
     width: 330px;
     height: 250px;
-    z-index: 4;
+    z-index: 20;
 }
 
 .restart {
-    background-image: url("../img/restart.png");
+    background-image: url("img/restart.png");
     background-size:contain;
     background-repeat: no-repeat;
     background-position: center;
     width: 200px;
     height: 70px;
-    z-index: 4;
+    z-index: 20;
 }
 
 .SidePannels{
@@ -67,6 +69,7 @@ canvas{
     justify-content: space-between;
     color: white;
 }
+
 #deadLives{
     filter: grayscale(80%);
 }
@@ -84,25 +87,33 @@ canvas{
 }
 
 
-  h2{
-      color: white;
-  }
+h2{
+    color: white;
+}
 
-  p{
-      color: white;
-  }
+p{
+    color: white;
+}
 
-  #name{
+#name{
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+}
+
+#content {
     display: flex;
-	flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
+    justify-content: center;
+    justify-items: center;
+    flex-direction: column;
+}
 
-  #title{
-      display: flex;
-      justify-content: center;
-  }
+
+#title{
+    display: flex;
+    justify-content: center;
+}
   
   /* --------------------MODAL---------------------*/
   .modal {
