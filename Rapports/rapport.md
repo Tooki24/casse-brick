@@ -13,11 +13,10 @@
 ---
 
 - Scrum Master :
-    - **Etavard Cédric**
-        - US09 - [Affichage des scores](#US9)
-        - US10 - [Affichage du menu](#US10)
-        - US06 - [Gestion des vies du joueu](#US6)
-        - US07 - [Gestion du score](#US7)
+   - **Fontaneau Thomas**
+      -  US02 - [La Raquette](#US2)
+      -  Rédaction du rapport
+
 - Product Owner :
     - **David Arthur**
       - US03 - [La balle](#US3)
@@ -29,9 +28,11 @@
     - **Dubuis Ingrid**
       - US05 - [La mort du joueur](#US5)
       - Création de l'oral
-    - **Fontaneau Thomas**
-      -  US02 - [La Raquette](#US2)
-      -  Rédaction du rapport
+    - **Etavard Cédric**
+        - US09 - [Affichage des scores](#US9)
+        - US10 - [Affichage du menu](#US10)
+        - US06 - [Gestion des vies du joueu](#US6)
+        - US07 - [Gestion du score](#US7)
 
 ## <a id="outil">**Outils et organisation**</a>
 ---
@@ -53,7 +54,7 @@ Chaque US avait une branch sur la branch dev, une fois la US finit une merge sur
 Pour partager les taches dans le projet nous avons découpé nos diffèrent composent (raquette, balle...) en classe. Voici le digramme de classe que nous avons produit pour nous aider : 
 <br>
 
-<img src="image_md/" width="300"/><br>
+<img src="image_md/diagramme.png" width="300"/><br>
 
 ## <a id="projet">**Avancement du projet :**</a>
 ---

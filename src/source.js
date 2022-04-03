@@ -166,16 +166,18 @@ $(document).ready(function()
     function draw() {
         context.clearRect(0, 0, canvas.width, canvas.height);
         raquette.drawRaquette(context);
-        balle.drawBalle(context);
-        drawBricks(bricksArray, context);
-        collide(canvas, balle, raquette);
+        balle.drawBalle(context); 
         if(start==1)
         {
             balle.move();
         }
+        drawBricks(bricksArray, context);
+        collide(canvas, balle, raquette);
+       
         
     }
     setInterval(draw, 10);
+
     drawSB(document)
     inputOpen(document);
     $("#btn").click(function(){
