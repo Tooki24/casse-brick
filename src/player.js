@@ -1,6 +1,6 @@
 let vies=3;
 let score=0;
-let nom="exemple";
+let nom="Nom";
 
 
 function drawName(document){
