@@ -166,7 +166,13 @@ $(document).ready(function()
     function draw() {
         context.clearRect(0, 0, canvas.width, canvas.height);
         raquette.drawRaquette(context);
+<<<<<<< HEAD
         balle.drawBalle(context); 
+=======
+        balle.drawBalle(context);
+        drawBricks(bricksArray, context);
+        collide(canvas, balle, raquette, bricksArray);
+>>>>>>> 80bcd648d7911a392398c483de283df12fef05b6
         if(start==1)
         {
             balle.move();

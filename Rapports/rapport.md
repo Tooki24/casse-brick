@@ -164,3 +164,4 @@ Une partie ce lance quand le joueur entre un nom et appuyé sur une des deux tou
 
 ## <a id="probleme">**Les problèmes rencontré :**</a>
 ---
+Notre principal problème au cours de ce projet a été le temps. En effet vu que pour la plupart d'entre nous n'avions jamais travaillés ensemble nous avons perdu un peu de temps à s'organiser et à établir un plan clair.En parallèle nous avions déjà d'autres projets qui monopolisait notre temps.
