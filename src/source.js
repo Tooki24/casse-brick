@@ -51,6 +51,7 @@ function collide(cvs, balle, raquette)
         console.log("La partie est perdue")
         balle.vitesseX = 0;
         balle.vitesseY = 0;
+        loseLife();
         openPopup();
     }
 
