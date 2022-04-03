@@ -20,7 +20,7 @@ function openPopup() {
 
     // Creation des elements de la popup
 
-    let divZoneJeu = document.getElementById('zoneDeJeu');
+    let divMain = document.getElementById('main');
 
     let divPartiePerdue = document.createElement('div');
     let divImage = document.createElement('div');
@@ -30,12 +30,12 @@ function openPopup() {
     divImage.className = "gameOver";
     divrestart.className = "restart";
 
-    divZoneJeu.appendChild(divPartiePerdue);
+    divMain.appendChild(divPartiePerdue);
     divPartiePerdue.appendChild(divImage);
     divPartiePerdue.appendChild(divrestart);
 
     // Gestion du clic sur le bouton restart
-    divrestart.addEventListener('click', function(){divPartiePerdue.style.display="none"; location.reload();});
+    divrestart.addEventListener('click', function(){divPartiePerdue.style.display="none"; });
 }
 
 
@@ -59,6 +59,7 @@ function collide(cvs, balle, raquette, bricksArray) {
         balle.vitesseY = 0;
         loseLife();
         openPopup();
+        
     }
 
     // --------------------------------------------------

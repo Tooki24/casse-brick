@@ -29,7 +29,9 @@ function notify(){
 }
 
 function loseLife(){
+    console.log("1 vie perdue");
     vies--;
+    drawLives(document);
     if(vies==0){
         notify()
     }
@@ -41,17 +43,25 @@ function getLives(){
 
 function drawLives(document){
     document.getElementById("score").innerHTML+=score
-    for(let i=0;i<getLives();i++)
-    {
-        console.log("+life");
-        document.getElementById("lives").innerHTML+='<img src="img/hearth.png" width="30px"></img>'
-    }
+    document.getElementById("lives").innerHTML=""
+
     if(getLives()<3){
+        for(let i=0; i<vies; i++)
+        {
+            document.getElementById("lives").innerHTML+='<img src="img/full_heart.png" width="30px"></img>'
+        }
         for(let i=0;i<3-getLives();i++)
         {
             console.log("-life");
-            document.getElementById("lives").innerHTML+='<img src="img/hearth.png" width="30px" id="deadLives"></img>'
+            document.getElementById("lives").innerHTML+='<img src="img/full_heart.png" width="30px" id="deadLives"></img>'
         } 
+    }
+    else {
+        for(let i=0;i<getLives();i++)
+        {
+            console.log("+life");
+            document.getElementById("lives").innerHTML+='<img src="img/full_heart.png" width="30px"></img>'
+        }
     }
 }
 
