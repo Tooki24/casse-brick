@@ -14,7 +14,7 @@ let interBrique = 3;
 let interBriqueMur = 4;
 
 
-function collide(cvs, balle, raquette) {
+function collide(cvs, balle, raquette, bricksArray) {
     //Si la balle touche le plafond
     if (balle.positionY - radiusBalle + balle.vitesseY < 0) {
         console.log("Collision avec le plafond")
@@ -26,6 +26,10 @@ function collide(cvs, balle, raquette) {
         console.log("Collision avec un des murs")
         balle.vitesseX = -balle.vitesseX;
     }
+
+    // --------------------------------------------------
+    // Si la balle touche la raquette
+    // --------------------------------------------------
 
     //Si la balle touche le haut de la raquette
     if (balle.positionY + radiusBalle + balle.vitesseY > raquette.positionY && balle.positionX >= raquette.positionX && balle.positionX <= raquette.positionX + raquette.largeur && balle.positionY <= raquette.positionY + raquette.hauteur) {
@@ -44,7 +48,45 @@ function collide(cvs, balle, raquette) {
         console.log("Collision avec le cote droit de la raquette")
         balle.vitesseX = -balle.vitesseX;
     }
+
+
+    // --------------------------------------------------
+    // Si la balles touche une brique
+    // --------------------------------------------------
+
+
+    // detect collision with bottom of a brick
+    for (let i=0; i<bricksArray.length;i++){
+        let aBrick=bricksArray[i]
+
+        if (balle.positionY + radiusBalle + balle.vitesseY > aBrick.positionY && balle.positionX >= aBrick.positionX && balle.positionX <= aBrick.positionX + aBrick.long && balle.positionY <= aBrick.positionY + aBrick.larg) {
+            console.log("Collision avec le bas d'une brique")
+            balle.vitesseY = -balle.vitesseY;
+            bricksArray.splice(i,1);
+        }
+
+        if (balle.positionY - radiusBalle + balle.vitesseY < aBrick.positionY + aBrick.larg && balle.positionX >= aBrick.positionX && balle.positionX <= aBrick.positionX + aBrick.long && balle.positionY >= aBrick.positionY) {
+            console.log("Collision avec le haut d'une brique")
+            balle.vitesseY = -balle.vitesseY;
+            bricksArray.splice(i,1);
+        }
+
+        
+        if (balle.positionX + radiusBalle + balle.vitesseX > aBrick.positionX && balle.positionY >= aBrick.positionY && balle.positionY <= aBrick.positionY + aBrick.larg && balle.positionX + radiusBalle <= aBrick.positionX + aBrick.long) {
+            console.log("Collision avec le cote gauche d'une brique")
+            balle.vitesseX = -balle.vitesseX;
+            bricksArray.splice(i,1);
+        }
+        
+        if (balle.positionX - radiusBalle + balle.vitesseX < aBrick.positionX + aBrick.long && balle.positionY >= aBrick.positionY && balle.positionY <= aBrick.positionY + aBrick.larg && balle.positionX - radiusBalle >= aBrick.positionX) {
+            console.log("Collision avec le cote droit d'une brique")
+            balle.vitesseX = -balle.vitesseX;
+            bricksArray.splice(i,1);
+        }
+    }
 }
+
+
 
 function generateBricks() {
     let bricksArray = [];
@@ -123,9 +165,9 @@ $(document).ready(function () {
         raquette.drawRaquette(context);
         balle.drawBalle(context);
         drawBricks(bricksArray, context);
-        collide(canvas, balle, raquette);
+        collide(canvas, balle, raquette, bricksArray);
         balle.move();
     }
-    setInterval(draw, 10);
+    setInterval(draw, 7);
+    
 });
-
