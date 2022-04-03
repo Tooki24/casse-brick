@@ -43,16 +43,16 @@
 -  [Visual studio code](https://code.visualstudio.com/) pour l'IDE.
 - [Git](https://gitlab.univ-lr.fr/cetavard/fontaneau_mahe_dubuis_david_etavard_progweb_cb) pour la gestion du code et des versions du code.
 
-Pour la gestion du git nous avons procéde de la manière suivante :<br>
+Pour la gestion du git nous avons procédé de la manière suivante :<br>
 ![image_git](image_md/git.png)<br>
-Chaque US avait une branch sur la branch dev, une fois la US finie une merge sur la dev est effectuée. Après vérification et résolution des éventuels conflits entre les US une merge du produit final est livrée sur la main. 
+Chaque US avait une branche basée sur la branche dev, une fois l'US finie, un merge sur la dev est effectué. Après vérification et résolution des éventuels conflits entre les US un merge du produit final est livré sur la main. 
 
 
 
 ## <a id="diagramme">**Diagrammes :**</a>
 ---
  
-Pour partager les tâches dans le projet nous avons découpé nos diffèrents composants (raquette, balle...) en classe. Voici le digramme de classe que nous avons produit pour nous aider : 
+Pour partager les tâches dans le projet nous avons découpé nos différents composants (raquette, balle...) en classe. Voici le diagramme de classe que nous avons produit pour nous aider : 
 <br>
 
 <img src="image_md/diagramme.png" width="300"/><br>
@@ -71,7 +71,7 @@ Cette US est divisée en 3 fonctionnalités et vise à créer une raquette qui s
 - Création de la forme de la raquette<br>
  <img src="image_md/raquette.png" width="300"/><br>
 
-- Gestion du mouvement de la Raquette <br>
+- Gestion du mouvement de la raquette <br>
  <img src="image_md/raquette_move.png" width="300"/><br>
 
 - Mise en place d'un blocage avec les bords du terrain <br>
@@ -95,7 +95,7 @@ L'US est divisée en 4 fonctionnalités et vise à créer une balle qui se dépl
  <img src="" width="300"/><br>
 
 ### <a id="US4">**US4 : Les briques**</a>
-On retrouve 3 fonctionnalités dans cette US qui vise à créer un mur de briques composé de briques "normale" et de briques "vitesse" (augmente la vitesse de la balle), ainsi que la disparition des briques en cas de contact avec la balle. 
+On retrouve 3 fonctionnalités dans cette US qui vise à créer un mur de briques composé de briques "normales" et de briques "vitesse" (augmente la vitesse de la balle), ainsi que la disparition des briques en cas de contact avec la balle. 
 
 - Création des briques normales <br>
 <img src="image_md/" width="300"/><br>
@@ -107,10 +107,10 @@ On retrouve 3 fonctionnalités dans cette US qui vise à créer un mur de brique
 ### <a id="US5">**US5 : La mort du joueur**</a>
 Cette US a pour rôle de détecter quand le joueur va perdre une vie c'est à dire quand la balle touche le bord inferieur du terrain. 
 
-<img src="image_md/" width="300"/><br>
+<img src="image_md/popup_partiePerdue.png" width="300"/><br>
 
 ### <a id="US6">**US6 : Gestion des vies du joueur**</a>
-L'US gère le nombre de vies restantes du joueur qui en a 3 au départ et en perd une à chaque foisque la balle touche le bord inferieur. 
+L'US gère le nombre de vies restantes du joueur qui en a 3 au départ et en perd une à chaque fois que la balle touche le bord inférieur. 
 
 - Le joueur possède toute sa vie <br>
 <img src="image_md/3vies.PNG" width="300"/><br>
@@ -134,11 +134,11 @@ A l'aide du serveur fourni, l'US consiste à enregistrer le score du joueur actu
 <img src="image_md/score.PNG" width="300"/><br>
 
 ### <a id="US10">**US10 : Affichage du menu**</a>
-On retrouve 4 fonctionnalités dans l'US, avec un bouton start pour lancer le jeu, une zone ou le joueur va inscrire son nom, les meilleur scores des autres joueurs et enfin les règles du jeu. 
+On retrouve 4 fonctionnalités dans l'US, avec un bouton start pour lancer le jeu, une zone où le joueur va inscrire son nom, les meilleur scores des autres joueurs et enfin les règles du jeu. 
 
 - Score des meilleurs joueurs <br>
   <img src="image_md/score.PNG" width="300"/><br>
-- Règle et nom du joueur <br>  
+- Règles et nom du joueur <br>  
   <img src="image_md/nom.PNG" width="300"/><br>
 - Changement du nom <br>
   <img src="image_md/changementnom.PNG" width="300"/><br>
@@ -160,9 +160,9 @@ Quand le joueur détruit la dernière brique du niveau actuel le jeu passe au ni
 
 ### Déroulement d'une partie 
 
-Une partie se lance quand le joueur entre un nom et appuie sur une des deux touches directionnelles (détaillé au-dessus). Le but du jeu est de détruire le plus de briques à l'aide d'une balle qui rebondie sur la raquette que nous contrôlons. Certaines briques sont dites "vitesse", lorque le joueur les détruit la vitesse de la balle augmente Le joueur possède trois vies et en perd une à chaque fois que la balle touche le mur inferieur. La partie s'achève lorsque que le joueur perd ses trois vies. 
+Une partie se lance quand le joueur entre un nom et appuie sur une des deux touches directionnelles (détaillé au-dessus). Le but du jeu est de détruire le plus de briques à l'aide d'une balle qui rebondit sur la raquette que nous contrôlons. Certaines briques sont dites "vitesse", lorque le joueur les détruit la vitesse de la balle augmente. Le joueur possède trois vies et en perd une à chaque fois que la balle touche le mur inférieur. La partie s'achève lorsque que le joueur perd ses trois vies. 
 
 
-## <a id="probleme">**Les problèmes rencontré :**</a>
+## <a id="probleme">**Les problèmes rencontrés :**</a>
 ---
-Notre principal problème au cours de ce projet a été le temps. En effet vu que pour la plupart d'entre nous n'avions jamais travaillés ensemble nous avons perdu un peu de temps à s'organiser et à établir un plan clair. En parallèle nous avions déjà d'autres projets qui monopolisaient notre temps.
+Notre principal problème au cours de ce projet a été le temps. En effet vu que pour la plupart d'entre nous, nous n'avions jamais travaillé ensemble, nous avons perdu un peu de temps à s'organiser et à établir un plan clair. En parallèle nous avions déjà d'autres projets qui monopolisaient notre temps.
