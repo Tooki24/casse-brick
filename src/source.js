@@ -168,7 +168,7 @@ $(document).ready(function()
         raquette.drawRaquette(context);
         balle.drawBalle(context);
         drawBricks(bricksArray, context);
-        collide(canvas, balle, raquette);
+        collide(canvas, balle, raquette, bricksArray);
         if(start==1)
         {
             balle.move();
