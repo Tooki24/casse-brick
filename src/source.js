@@ -148,14 +148,15 @@ $(document).ready(function()
     document.addEventListener("keydown", keyDownHandler);
 
     function keyDownHandler(event) {
-        start=1;
         console.log("Position de la raquette : " + raquette.getpositionX());
         if (event.key == "Right" || event.key == "ArrowRight") {
+            start=1;
             if (raquette.getpositionX() < canvas.width - largeurRaquette) {
                 raquette.setpositionX(raquette.getpositionX() + raquette.getvitesse());
             }
         }
         else if (event.key == "Left" || event.key == "ArrowLeft") {
+            start=1;
             if (raquette.getpositionX() > 0) {
                 raquette.setpositionX(raquette.getpositionX() - raquette.getvitesse());
             }
@@ -166,21 +167,13 @@ $(document).ready(function()
     function draw() {
         context.clearRect(0, 0, canvas.width, canvas.height);
         raquette.drawRaquette(context);
-<<<<<<< HEAD
         balle.drawBalle(context); 
-=======
-        balle.drawBalle(context);
         drawBricks(bricksArray, context);
         collide(canvas, balle, raquette, bricksArray);
->>>>>>> 80bcd648d7911a392398c483de283df12fef05b6
         if(start==1)
         {
             balle.move();
         }
-        drawBricks(bricksArray, context);
-        collide(canvas, balle, raquette);
-       
-        
     }
     setInterval(draw, 10);
 
