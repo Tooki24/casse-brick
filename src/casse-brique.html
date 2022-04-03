@@ -2,17 +2,48 @@
 <html>
     <head>
         <link rel="stylesheet" href="casse-briques.css">
+        <script src="jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="murs.js"></script>
+        <script type="text/javascript" src="player.js"></script>
+        <script type="text/javascript" src="scoreBoard.js"></script>
     </head>
-   <body>
-       <H1>Casse-Brique</H1>
-       <div id="zoneDeJeu">
-           <canvas id="drawArea" width="700" height="600" >Your browser doesn't support canvas</canvas>
+   <body>   
+       <div id="pannelLeft" class="SidePannels">
+           <table>
+               <thead>
+                   <tr>
+                       <th colspan="2" white-space="nowrap">Table des scores🏆</th>
+                   </tr>
+               </thead>
+               <tbody id="ListScore">
+                   
+               </tbody>
+           </table>
        </div>
-       
-       <script type="text/javascript" src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
-       <script type="text/javascript" src="source.js"></script>
-       <script type="text/javascript" src="brick.js"></script>
-       <script type="text/javascript" src="raquette.js"></script>
-       <script type="text/javascript" src="balle.js"></script>
+       <div id="main"  width="80%">
+            <h1 text-align="center">Casse-Brique</h1>  
+       <canvas id="drawArea" width="700" height="600">Your browser doesn't support canvas</canvas>
+        <div id="scorelives">
+            <div id="score">score: </div>
+            <div id="lives">vies: </div>
+        </div>
+       </div>
+       <div id="pannelRight" class="SidePannels">
+           <div id="name">
+                <h2 id="nom"></h2><button id="modify"><img src="img/pen.png" width="10px" heigth="10px"/></button>
+           </div>
+           <div id ="regle">
+                <h2>Voici les règles :</h2>
+                <p><img src="img/right_arrow.png" width="15px"/> -> pour aller à droite</p>
+                <p><img src="img/left_arrow.png" width="15px"/> -> pour aller à gauche</p>
+                <p>La partie est finie quand tes<img src="img/hearth.png" width="15px"/>sont épuisées. </p>
+           </div>
+       </div>
+       <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close">&times;</span>
+            <input type="text" value="Nom" id="inputNom" /><button id="btn">ok</button>
+        </div>
+    </div>
    </body>
 </html>

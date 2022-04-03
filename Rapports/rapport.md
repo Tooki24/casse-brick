@@ -111,33 +111,35 @@ Cette US a pour rôle détecter quand le joueur va perdre une vie c'est à dire 
 L'US gère le nombre de vie restante du joueur il en a 3 de base et perd une vie à chaque fois que le détecte de la balle a touché le bord inferieur. 
 
 - Le joueur possède toute sa vie <br>
-<img src="image_md/" width="300"/><br>
+<img src="image_md/3vies.PNG" width="300"/><br>
 
 - Le joueur perd une vie <br>
-<img src="image_md/" width="300"/><br>
+<img src="image_md/2vies.PNG" width="300"/><br>
 
 ### <a id="US7">**US7 : Gestion du score**</a>
 
 Cette US permet d'ajouter au score du joueur des points en fonction des briques qu'il détruit. 
 
 - Le joueur détruit une brique normal <br>
-<img src="image_md/" width="300"/><br>
+<img src="image_md/score10.png" width="300"/><br>
 
 - Le joueur détruit une brique vitesse <br>
-<img src="image_md/" width="300"/><br>
+<img src="image_md/score30.png" width="300"/><br>
 
 ### <a id="US9">**US9 : Affichage des score**</a>
 A l'aide du serveur fournie l'US consiste à enregistrer le score du joueur actuellement en train de jouer. 
 
-<img src="image_md/" width="300"/><br>
+<img src="image_md/score.PNG" width="300"/><br>
 
 ### <a id="US10">**US10 : Affichage du menu**</a>
 On retrouve 4 fonctionnalités dans l'US, avec un bouton start pour lancer le jeu, une zone ou le joueur va inscrire son nom, les meilleur score des autres joueurs et enfin les règle du jeu. 
 
 - Score des meilleur joueurs <br>
-  <img src="image_md/" width="300"/><br>
+  <img src="image_md/score.PNG" width="300"/><br>
 - Règle et nom du joueur <br>  
-  <img src="image_md/" width="300"/><br>
+  <img src="image_md/nom.PNG" width="300"/><br>
+- Changement du nom <br>
+  <img src="image_md/changementnom.PNG" width="300"/><br>
 
 ### **Les fonctionnalités manquantes**
 

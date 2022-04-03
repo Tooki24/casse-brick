@@ -12,7 +12,7 @@ let nbColonnes = 9;
 let nbLignes = 9;
 let interBrique = 3;
 let interBriqueMur = 4;
-
+let start = 0;
 
 function collide(cvs, balle, raquette, bricksArray) {
     //Si la balle touche le plafond
@@ -128,9 +128,11 @@ function drawBricks(bricksArray, ctx) {
 
 
 
-
-$(document).ready(function () {
-    //Canvas
+$(document).ready(function()
+{
+    drawName(document)
+    console.log('test');
+    /* Canvas */
     canvas = document.getElementById('drawArea');
     context = canvas.getContext('2d');
     context.lineWidth = 1;
@@ -146,6 +148,7 @@ $(document).ready(function () {
     document.addEventListener("keydown", keyDownHandler);
 
     function keyDownHandler(event) {
+        start=1;
         console.log("Position de la raquette : " + raquette.getpositionX());
         if (event.key == "Right" || event.key == "ArrowRight") {
             if (raquette.getpositionX() < canvas.width - largeurRaquette) {
@@ -165,9 +168,29 @@ $(document).ready(function () {
         raquette.drawRaquette(context);
         balle.drawBalle(context);
         drawBricks(bricksArray, context);
-        collide(canvas, balle, raquette, bricksArray);
-        balle.move();
+        collide(canvas, balle, raquette);
+        if(start==1)
+        {
+            balle.move();
+        }
+        
     }
-    setInterval(draw, 7);
-    
+    setInterval(draw, 10);
+    drawSB(document)
+    inputOpen(document);
+    $("#btn").click(function(){
+        console.log("clic");
+        setNom(document.getElementById("inputNom").value,document);
+        document.getElementById("myModal").style.display="none"
+    })
+    $("#close").click(function(){
+        document.getElementById("myModal").style.display="none"
+    })
+    $("#modify").click(function(){
+        document.getElementById("myModal").style.display="block"
+    })
+    buildMurs(context);
+    addScore(getNom(),100);
+    drawLives(document);
 });
+
