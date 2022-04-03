@@ -2,14 +2,14 @@
 # Casse Brique 
 
 ## Contenu du Rapport
-1. [Rôle et participation](#role)
+1. [Rôles et participation](#role)
 2. [Outils et organisation](#outil)
 3. [Diagrammes](#diagramme)
 4. [Avancement du projet](#projet)
 5. [Les règles](#regle)
 6. [Nos problèmes](#probleme)
 
-## <a id="role">**Rôle et participation des membres du projet :**</a>
+## <a id="role">**Rôles et participation des membres du projet :**</a>
 ---
 
 - Scrum Master :
@@ -20,6 +20,7 @@
 - Product Owner :
     - **David Arthur**
       - US03 - [La balle](#US3)
+      - Visuel du jeu
       - Création des maquettes du jeu
 - Scrum Team :
     - **Mahé Mélina**
@@ -31,27 +32,27 @@
     - **Etavard Cédric**
         - US09 - [Affichage des scores](#US9)
         - US10 - [Affichage du menu](#US10)
-        - US06 - [Gestion des vies du joueu](#US6)
+        - US06 - [Gestion des vies du joueur](#US6)
         - US07 - [Gestion du score](#US7)
 
 ## <a id="outil">**Outils et organisation**</a>
 ---
 
-- [Discord](https://discord.com/channels/886308385677508738/955813976523018260) pour la communication d'information. 
-- [Trello](https://trello.com/b/uI0YcPtl/casse-brique) pour l'organisation des sprints et la repartition des tâches.
+- [Discord](https://discord.com/channels/886308385677508738/955813976523018260) pour la communication d'informations. 
+- [Trello](https://trello.com/b/uI0YcPtl/casse-brique) pour l'organisation des sprints et la répartition des tâches.
 -  [Visual studio code](https://code.visualstudio.com/) pour l'IDE.
 - [Git](https://gitlab.univ-lr.fr/cetavard/fontaneau_mahe_dubuis_david_etavard_progweb_cb) pour la gestion du code et des versions du code.
 
 Pour la gestion du git nous avons procéde de la manière suivante :<br>
 ![image_git](image_md/git.png)<br>
-Chaque US avait une branch sur la branch dev, une fois la US finit une merge sur la dev et effectué. Après vérification et résolution des éventuel conflits entre les US une merge du produit final et livrer sur la main. 
+Chaque US avait une branch sur la branch dev, une fois la US finie une merge sur la dev est effectuée. Après vérification et résolution des éventuels conflits entre les US une merge du produit final est livrée sur la main. 
 
 
 
 ## <a id="diagramme">**Diagrammes :**</a>
 ---
  
-Pour partager les taches dans le projet nous avons découpé nos diffèrent composent (raquette, balle...) en classe. Voici le digramme de classe que nous avons produit pour nous aider : 
+Pour partager les tâches dans le projet nous avons découpé nos diffèrents composants (raquette, balle...) en classe. Voici le digramme de classe que nous avons produit pour nous aider : 
 <br>
 
 <img src="image_md/diagramme.png" width="300"/><br>
@@ -59,11 +60,11 @@ Pour partager les taches dans le projet nous avons découpé nos diffèrent comp
 ## <a id="projet">**Avancement du projet :**</a>
 ---
 
-### **Les fonctionnalités implémentées (découpé en US)**<br><br>
+### **Les fonctionnalités implémentées (découpées en US)**<br><br>
 
 ### <a id="US2">**US2 : La raquette**</a>
 
-Cette US est divisée en 3 fonctionnalités et vise à crée une raquette que se déplace en fonction de la flèche directionnel pressé. 
+Cette US est divisée en 3 fonctionnalités et vise à créer une raquette qui se déplace en fonction de la flèche directionnelle pressée. 
 
  
 
@@ -79,7 +80,7 @@ Cette US est divisée en 3 fonctionnalités et vise à crée une raquette que se
 
 ### <a id="US3">**US3 : La balle**</a>
 
-L'US est divisée en 4 fonctionnalités et vise à crée une balle que se déplace et change de direction en fonction des obstacles rencontré (mur,brique,raquette). 
+L'US est divisée en 4 fonctionnalités et vise à créer une balle qui se déplace et change de direction en fonction des obstacles rencontrés (mur,brique,raquette). 
 
 - Création de la forme de la balle<br>
  <img src="image_md/balle.png" width="300"/><br>
@@ -94,7 +95,7 @@ L'US est divisée en 4 fonctionnalités et vise à crée une balle que se dépla
  <img src="" width="300"/><br>
 
 ### <a id="US4">**US4 : Les briques**</a>
-On retrouve 3 fonctionnalités dans cette API qui vise à crée un mur de brique composé de brique "normale" et de brique "vitesse" (augmente la vitesse de la raquette) ainsi que la disparition des briques en cas de contact avec la balle. 
+On retrouve 3 fonctionnalités dans cette US qui vise à créer un mur de briques composé de briques "normale" et de briques "vitesse" (augmente la vitesse de la balle), ainsi que la disparition des briques en cas de contact avec la balle. 
 
 - Création des briques normales <br>
 <img src="image_md/" width="300"/><br>
@@ -104,12 +105,12 @@ On retrouve 3 fonctionnalités dans cette API qui vise à crée un mur de brique
 <img src="image_md/" width="300"/><br>
 
 ### <a id="US5">**US5 : La mort du joueur**</a>
-Cette US a pour rôle détecter quand le joueur va perdre une vie c'est à dire quand la balle touche le bord inferieur du terrain. 
+Cette US a pour rôle de détecter quand le joueur va perdre une vie c'est à dire quand la balle touche le bord inferieur du terrain. 
 
 <img src="image_md/" width="300"/><br>
 
 ### <a id="US6">**US6 : Gestion des vies du joueur**</a>
-L'US gère le nombre de vie restante du joueur il en a 3 de base et perd une vie à chaque fois que le détecte de la balle a touché le bord inferieur. 
+L'US gère le nombre de vies restantes du joueur qui en a 3 au départ et en perd une à chaque foisque la balle touche le bord inferieur. 
 
 - Le joueur possède toute sa vie <br>
 <img src="image_md/3vies.PNG" width="300"/><br>
@@ -121,21 +122,21 @@ L'US gère le nombre de vie restante du joueur il en a 3 de base et perd une vie
 
 Cette US permet d'ajouter au score du joueur des points en fonction des briques qu'il détruit. 
 
-- Le joueur détruit une brique normal <br>
+- Le joueur détruit une brique normale <br>
 <img src="image_md/score10.png" width="300"/><br>
 
 - Le joueur détruit une brique vitesse <br>
 <img src="image_md/score30.png" width="300"/><br>
 
 ### <a id="US9">**US9 : Affichage des score**</a>
-A l'aide du serveur fournie l'US consiste à enregistrer le score du joueur actuellement en train de jouer. 
+A l'aide du serveur fourni, l'US consiste à enregistrer le score du joueur actuellement en train de jouer. 
 
 <img src="image_md/score.PNG" width="300"/><br>
 
 ### <a id="US10">**US10 : Affichage du menu**</a>
-On retrouve 4 fonctionnalités dans l'US, avec un bouton start pour lancer le jeu, une zone ou le joueur va inscrire son nom, les meilleur score des autres joueurs et enfin les règle du jeu. 
+On retrouve 4 fonctionnalités dans l'US, avec un bouton start pour lancer le jeu, une zone ou le joueur va inscrire son nom, les meilleur scores des autres joueurs et enfin les règles du jeu. 
 
-- Score des meilleur joueurs <br>
+- Score des meilleurs joueurs <br>
   <img src="image_md/score.PNG" width="300"/><br>
 - Règle et nom du joueur <br>  
   <img src="image_md/nom.PNG" width="300"/><br>
@@ -145,7 +146,7 @@ On retrouve 4 fonctionnalités dans l'US, avec un bouton start pour lancer le je
 ### **Les fonctionnalités manquantes**
 
 ### <a id="US8">**US8 : Gestion du passage de niveau**</a>
-Quand le joueur détruit la dernière brique du niveau actuelle le jeu passe au niveau suivant et un nouveau mur est créé. 
+Quand le joueur détruit la dernière brique du niveau actuel le jeu passe au niveau suivant et un nouveau mur est créé. 
 
 ## <a id="regle">**Règles :**</a>
 ---
@@ -159,9 +160,9 @@ Quand le joueur détruit la dernière brique du niveau actuelle le jeu passe au 
 
 ### Déroulement d'une partie 
 
-Une partie ce lance quand le joueur entre un nom et appuyé sur une des deux touches directionnel (détaillé au-dessus). Le but du jeu est de détruire le plus de brique à l'aide d'une balle qui rebondie sur la raquette que nous contrôlons. Le joueur possède trois vies et en perd une à chaque fois que la balle touche le mur inferieur. La partie s'achevé lorsque que le joueur perd ces trois vies. 
+Une partie se lance quand le joueur entre un nom et appuie sur une des deux touches directionnelles (détaillé au-dessus). Le but du jeu est de détruire le plus de briques à l'aide d'une balle qui rebondie sur la raquette que nous contrôlons. Certaines briques sont dites "vitesse", lorque le joueur les détruit la vitesse de la balle augmente Le joueur possède trois vies et en perd une à chaque fois que la balle touche le mur inferieur. La partie s'achève lorsque que le joueur perd ses trois vies. 
 
 
 ## <a id="probleme">**Les problèmes rencontré :**</a>
 ---
-Notre principal problème au cours de ce projet a été le temps. En effet vu que pour la plupart d'entre nous n'avions jamais travaillés ensemble nous avons perdu un peu de temps à s'organiser et à établir un plan clair.En parallèle nous avions déjà d'autres projets qui monopolisait notre temps.
+Notre principal problème au cours de ce projet a été le temps. En effet vu que pour la plupart d'entre nous n'avions jamais travaillés ensemble nous avons perdu un peu de temps à s'organiser et à établir un plan clair. En parallèle nous avions déjà d'autres projets qui monopolisaient notre temps.
