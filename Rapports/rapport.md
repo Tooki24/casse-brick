@@ -96,11 +96,11 @@ L'US est divisée en 4 fonctionnalités et vise à crée une balle que se dépla
 On retrouve 3 fonctionnalités dans cette API qui vise à crée un mur de brique composé de brique "normale" et de brique "vitesse" (augmente la vitesse de la raquette) ainsi que la disparition des briques en cas de contact avec la balle. 
 
 - Création des briques normales <br>
-<img src="image_md/" width="300"/><br>
+<img src="image_md/normaleBrick.png" width="300"/><br>
 - Création des briques vitesses <br>
-<img src="image_md/" width="300"/><br>
+<img src="image_md/vitesseBrick.png" width="300"/><br>
 - Gestion de la disparition des briques <br>
-<img src="image_md/" width="300"/><br>
+<img src="image_md/gestionbrick.png" width="300"/><br>
 
 ### <a id="US5">**US5 : La mort du joueur**</a>
 Cette US a pour rôle détecter quand le joueur va perdre une vie c'est à dire quand la balle touche le bord inferieur du terrain. 
