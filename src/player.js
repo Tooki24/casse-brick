@@ -29,7 +29,6 @@ function notify(){
 }
 
 function loseLife(){
-    console.log("1 vie perdue");
     vies--;
     if(vies==0){
         notify()

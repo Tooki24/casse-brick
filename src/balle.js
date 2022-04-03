@@ -4,8 +4,8 @@ class Balle
     {
         this.positionX = positionX;
         this.positionY = positionY;
-        this.vitesseX = 2;
-        this.vitesseY = -2;
+        this.vitesseX = 1.25;
+        this.vitesseY = -1.25;
         this.angle = 45;
         this.radiusBalle = radiusBalle;
     }
@@ -15,7 +15,7 @@ class Balle
         //Dessin de la balle
         ctx.beginPath();
         ctx.arc(this.positionX+this.vitesseX, this.positionY+this.vitesseY, this.radiusBalle, 0, Math.PI*2);
-        ctx.fillStyle = "#6BFCFC";
+        ctx.fillStyle = "#FF00FF";
         ctx.fill();
         ctx.closePath();
     }
