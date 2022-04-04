@@ -175,13 +175,13 @@ $(document).ready(function()
 
     function keyDownHandler(event) {
         console.log("Position de la raquette : " + raquette.getpositionX());
-        if (event.key == "Right" || event.key == "ArrowRight") {
+        if ((event.key == "Right" || event.key == "ArrowRight") && start2==1) {
             start=1;
             if (raquette.getpositionX() < canvas.width - largeurRaquette) {
                 raquette.setpositionX(raquette.getpositionX() + raquette.getvitesse());
             }
         }
-        else if (event.key == "Left" || event.key == "ArrowLeft") {
+        else if ((event.key == "Left" || event.key == "ArrowLeft") && start2==1) {
             start=1;
             if (raquette.getpositionX() > 0) {
                 raquette.setpositionX(raquette.getpositionX() - raquette.getvitesse());
