@@ -98,12 +98,14 @@ function collide(cvs, balle, raquette, bricksArray) {
             console.log("Collision avec le bas d'une brique")
             balle.vitesseY = -balle.vitesseY;
             bricksArray.splice(i,1);
+            setScore(aBrick.points);
         }
 
         if (balle.positionY - radiusBalle + balle.vitesseY < aBrick.positionY + aBrick.larg && balle.positionX >= aBrick.positionX && balle.positionX <= aBrick.positionX + aBrick.long && balle.positionY >= aBrick.positionY) {
             console.log("Collision avec le haut d'une brique")
             balle.vitesseY = -balle.vitesseY;
             bricksArray.splice(i,1);
+            setScore(aBrick.points);
         }
 
         
@@ -111,12 +113,14 @@ function collide(cvs, balle, raquette, bricksArray) {
             console.log("Collision avec le cote gauche d'une brique")
             balle.vitesseX = -balle.vitesseX;
             bricksArray.splice(i,1);
+            setScore(aBrick.points);
         }
         
         if (balle.positionX - radiusBalle + balle.vitesseX < aBrick.positionX + aBrick.long && balle.positionY >= aBrick.positionY && balle.positionY <= aBrick.positionY + aBrick.larg && balle.positionX - radiusBalle >= aBrick.positionX) {
             console.log("Collision avec le cote droit d'une brique")
             balle.vitesseX = -balle.vitesseX;
             bricksArray.splice(i,1);
+            setScore(aBrick.points);
         }
     }
 }
@@ -136,7 +140,7 @@ function generateBricks() {
              }
             //apparition de briques de vitesse
             else if (random > 84) {
-                nbPoints = 10;
+                nbPoints = 30;
                 brickType = 1;
             }
 
@@ -175,13 +179,13 @@ $(document).ready(function()
 
     function keyDownHandler(event) {
         console.log("Position de la raquette : " + raquette.getpositionX());
-        if (event.key == "Right" || event.key == "ArrowRight") {
+        if ((event.key == "Right" || event.key == "ArrowRight") && start2==1) {
             start=1;
             if (raquette.getpositionX() < canvas.width - largeurRaquette) {
                 raquette.setpositionX(raquette.getpositionX() + raquette.getvitesse());
             }
         }
-        else if (event.key == "Left" || event.key == "ArrowLeft") {
+        else if ((event.key == "Left" || event.key == "ArrowLeft") && start2==1) {
             start=1;
             if (raquette.getpositionX() > 0) {
                 raquette.setpositionX(raquette.getpositionX() - raquette.getvitesse());
@@ -200,6 +204,7 @@ $(document).ready(function()
         {
             balle.move();
         }
+        drawLives(document);
     }
     setInterval(draw, 10);
 
@@ -221,6 +226,5 @@ $(document).ready(function()
     })
     buildMurs(context);
     addScore(getNom(),100);
-    drawLives(document);
 });
 

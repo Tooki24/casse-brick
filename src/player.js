@@ -42,7 +42,7 @@ function getLives(){
 }
 
 function drawLives(document){
-    document.getElementById("score").innerHTML+=score
+    document.getElementById("score").innerHTML="score : "+score
     document.getElementById("lives").innerHTML=""
 
     if(getLives()<3){
